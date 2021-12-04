@@ -14,4 +14,4 @@ delete_merged_file: true
 language:
   ui:
     chapter_name: "Chapter "
-# new_session: true
+new_session: true
