@@ -1,6 +1,6 @@
 bookdown::gitbook:
-  highlight: tango
-  css: style.css
+  # highlight: tango
+  css: assets/style.css
   config:
     toc:
       collapse: section
@@ -11,6 +11,9 @@ bookdown::gitbook:
     edit: 
       link: https://github.com/rvcuenca/electure_notes_test/edit/main/%s
       text: "Suggest an edit"
+    toolbar: 
+      position: 
+    download: ["rmd"]
 #     download: ["pdf", "epub"]
 # bookdown::pdf_book:
 #   includes:
