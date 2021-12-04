@@ -1,12 +1,14 @@
 bookdown::gitbook:
+  highlight: tango
   css: style.css
   config:
     toc:
+      collapse: section
       before: |
         <li><a href="./">A Minimal Book Example</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
+    edit: https://github.com/rvcuenca/electure_notes_test/edit/main/%s
 #     download: ["pdf", "epub"]
 # bookdown::pdf_book:
 #   includes:

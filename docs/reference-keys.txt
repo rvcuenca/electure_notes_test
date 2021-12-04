@@ -2,19 +2,15 @@ fig:nice-fig
 tab:nice-tab
 eq:binom
 thm:tri
-about
-usage
-render-book
-preview-book
 hello-bookdown
 a-section
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables
-parts
 footnotes-and-citations
 footnotes
 citations
+parts
 blocks
 equations
 theorems-and-proofs
@@ -23,3 +19,5 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
+appendix-a
+appendix-b
