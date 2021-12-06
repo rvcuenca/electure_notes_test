@@ -22,84 +22,88 @@ favicon: images/favicon.ico
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$. Hmm
 
-```{r}
-library(leaflet)
-orstationc <- read.csv("./data/orstationc.csv")
-pal <- colorQuantile("YlOrRd", NULL, n = 8)
-leaflet(data = orstationc) %>% 
-  addTiles() %>%
-  addCircleMarkers(color = ~pal(tann))
-```
 
 
-```{r}
-library(dygraphs)
-dygraph(nhtemp, main = "New Haven Temperatures") %>% 
-  dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01"))
-```
+<!-- ```{r} -->
+<!-- library(leaflet) -->
+<!-- orstationc <- read.csv("./data/orstationc.csv") -->
+<!-- pal <- colorQuantile("YlOrRd", NULL, n = 8) -->
+<!-- leaflet(data = orstationc) %>%  -->
+<!--   addTiles() %>% -->
+<!--   addCircleMarkers(color = ~pal(tann)) -->
+<!-- ``` -->
 
 
-
-```{r}
-library(ggplot2)
-library(plotly)
-p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
-            geom_bar(position = "dodge")
-ggplotly(p)
-```
+<!-- ```{r} -->
+<!-- library(dygraphs) -->
+<!-- dygraph(nhtemp, main = "New Haven Temperatures") %>%  -->
+<!--   dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01")) -->
+<!-- ``` -->
 
 
 
-```{r}
-library(rbokeh)
-figure() %>%
-  ly_points(Sepal.Length, Sepal.Width, data = iris,
-    color = Species, glyph = Species,
-    hover = list(Sepal.Length, Sepal.Width))
-```
-
-```{r}
-library(magrittr)
-library(highcharter)
-hchart(mtcars, "scatter", hcaes(wt, mpg, z = drat, color = hp)) %>%
-  hc_title(text = "Scatter chart with size and color")
-```
-
-```{r}
-library(visNetwork)
-nodes <- data.frame(id = 1:6, title = paste("node", 1:6), 
-                    shape = c("dot", "square"),
-                    size = 10:15, color = c("blue", "red"))
-edges <- data.frame(from = 1:5, to = c(5, 4, 6, 3, 3))
-visNetwork(nodes, edges) %>%
-  visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE)
-```
+<!-- ```{r} -->
+<!-- library(ggplot2) -->
+<!-- library(plotly) -->
+<!-- p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) + -->
+<!--             geom_bar(position = "dodge") -->
+<!-- ggplotly(p) -->
+<!-- ``` -->
 
 
 
-```{r}
-library(networkD3)
-data(MisLinks, MisNodes)
-forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
-             Target = "target", Value = "value", NodeID = "name",
-             Group = "group", opacity = 0.4)
-```
+<!-- ```{r} -->
+<!-- library(rbokeh) -->
+<!-- figure() %>% -->
+<!--   ly_points(Sepal.Length, Sepal.Width, data = iris, -->
+<!--     color = Species, glyph = Species, -->
+<!--     hover = list(Sepal.Length, Sepal.Width)) -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- library(magrittr) -->
+<!-- library(highcharter) -->
+<!-- hchart(mtcars, "scatter", hcaes(wt, mpg, z = drat, color = hp)) %>% -->
+<!--   hc_title(text = "Scatter chart with size and color") -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- library(visNetwork) -->
+<!-- nodes <- data.frame(id = 1:6, title = paste("node", 1:6),  -->
+<!--                     shape = c("dot", "square"), -->
+<!--                     size = 10:15, color = c("blue", "red")) -->
+<!-- edges <- data.frame(from = 1:5, to = c(5, 4, 6, 3, 3)) -->
+<!-- visNetwork(nodes, edges) %>% -->
+<!--   visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) -->
+<!-- ``` -->
 
 
 
-```{r}
-library(DT)
-datatable(iris, options = list(pageLength = 5))
-```
+<!-- ```{r} -->
+<!-- library(networkD3) -->
+<!-- data(MisLinks, MisNodes) -->
+<!-- forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source", -->
+<!--              Target = "target", Value = "value", NodeID = "name", -->
+<!--              Group = "group", opacity = 0.4) -->
+<!-- ``` -->
 
 
-```{r}
-library(threejs)
-z <- seq(-10, 10, 0.01)
-x <- cos(z)
-y <- sin(z)
-scatterplot3js(x,y,z, color=rainbow(length(z)))
-```
+
+<!-- ```{r} -->
+<!-- library(DT) -->
+<!-- datatable(iris, options = list(pageLength = 5)) -->
+<!-- ``` -->
+
+
+<!-- ```{r} -->
+<!-- library(threejs) -->
+<!-- z <- seq(-10, 10, 0.01) -->
+<!-- x <- cos(z) -->
+<!-- y <- sin(z) -->
+<!-- scatterplot3js(x,y,z, color=rainbow(length(z))) -->
+<!-- ``` -->
+
+
 
 ```{r}
 library(rgl)
